@@ -1,0 +1,230 @@
+[
+  {
+    "id": "k01",
+    "name": "Amma's Rasoi",
+    "cuisine": "South Indian",
+    "pricePerTiffin": 120,
+    "isVeg": true,
+    "rating": 4.6,
+    "distanceKm": 1.2,
+    "description": "Home-style South Indian meals made fresh each morning, with house-ground chutneys and sambar.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Sambar rice", "Beans poriyal", "Curd", "Papad"]},
+      {"day": "Tuesday", "items": ["Lemon rice", "Coconut chutney", "Potato fry", "Buttermilk"]},
+      {"day": "Wednesday", "items": ["Bisi bele bath", "Boondi raita", "Papad"]},
+      {"day": "Thursday", "items": ["Rasam rice", "Cabbage thoran", "Appalam"]},
+      {"day": "Friday", "items": ["Tomato rice", "Mixed veg kootu", "Curd"]},
+      {"day": "Saturday", "items": ["Curd rice", "Medu vada", "Mango pickle"]},
+      {"day": "Sunday", "items": ["Veg biryani", "Raita", "Payasam"]}
+    ]
+  },
+  {
+    "id": "k02",
+    "name": "Punjabi Tadka Tiffins",
+    "cuisine": "North Indian",
+    "pricePerTiffin": 140,
+    "isVeg": false,
+    "rating": 4.4,
+    "distanceKm": 2.1,
+    "description": "Rich North Indian gravies, soft rotis and hearty portions for a proper lunch.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Dal makhani", "Jeera rice", "3 roti", "Salad"]},
+      {"day": "Tuesday", "items": ["Butter chicken", "Jeera rice", "3 roti", "Onion salad"]},
+      {"day": "Wednesday", "items": ["Chole", "Jeera rice", "3 roti", "Pickle"]},
+      {"day": "Thursday", "items": ["Egg curry", "Rice", "3 roti", "Salad"]},
+      {"day": "Friday", "items": ["Rajma", "Rice", "3 roti", "Raita"]},
+      {"day": "Saturday", "items": ["Chicken curry", "Rice", "3 roti", "Salad"]},
+      {"day": "Sunday", "items": ["Paneer butter masala", "2 butter naan", "Pulao", "Gulab jamun"]}
+    ]
+  },
+  {
+    "id": "k03",
+    "name": "Gujarati Thaal Ghar",
+    "cuisine": "Gujarati",
+    "pricePerTiffin": 130,
+    "isVeg": true,
+    "rating": 4.5,
+    "distanceKm": 0.8,
+    "description": "Traditional Gujarati thaal with a gentle sweet-and-savoury balance, fully vegetarian.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Gujarati dal", "Rice", "3 rotli", "Bhindi sabzi"]},
+      {"day": "Tuesday", "items": ["Kadhi", "Khichdi", "Rotli", "Papad"]},
+      {"day": "Wednesday", "items": ["Sev tameta", "Dal", "Rice", "Rotli"]},
+      {"day": "Thursday", "items": ["Thepla", "Dhokla", "Chhunda", "Chhaas"]},
+      {"day": "Friday", "items": ["Ringan bharta", "Bajra rotla", "Dal", "Rice"]},
+      {"day": "Saturday", "items": ["Dal dhokli", "Rice", "Salad", "Papad"]},
+      {"day": "Sunday", "items": ["Puri", "Aloo sabzi", "Shrikhand", "Khaman"]}
+    ]
+  },
+  {
+    "id": "k04",
+    "name": "Bengal Bhoj Kitchen",
+    "cuisine": "Bengali",
+    "pricePerTiffin": 160,
+    "isVeg": false,
+    "rating": 4.7,
+    "distanceKm": 3.4,
+    "description": "Bengali home cooking with fish, mustard and seasonal vegetables.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Moong dal", "Rice", "Aloo posto", "Papad"]},
+      {"day": "Tuesday", "items": ["Rohu macher jhol", "Rice", "Begun bhaja", "Dal"]},
+      {"day": "Wednesday", "items": ["Shukto", "Rice", "Moong dal", "Chutney"]},
+      {"day": "Thursday", "items": ["Chicken kosha", "Rice", "Dal", "Salad"]},
+      {"day": "Friday", "items": ["Fish curry", "Rice", "Aloo bhaja", "Dal"]},
+      {"day": "Saturday", "items": ["Egg curry", "Rice", "Dal", "Salad"]},
+      {"day": "Sunday", "items": ["Mutton curry", "Pulao", "Raita", "Rasgulla"]}
+    ]
+  },
+  {
+    "id": "k05",
+    "name": "Maa Ki Rasoi",
+    "cuisine": "North Indian Home-style",
+    "pricePerTiffin": 110,
+    "isVeg": true,
+    "rating": 4.2,
+    "distanceKm": 1.7,
+    "description": "Everyday dal, sabzi and roti just like home, light on oil.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Dal tadka", "Rice", "3 roti", "Aloo gobi"]},
+      {"day": "Tuesday", "items": ["Rajma", "Rice", "3 roti", "Salad"]},
+      {"day": "Wednesday", "items": ["Kadhi pakora", "Rice", "3 roti", "Papad"]},
+      {"day": "Thursday", "items": ["Lauki chana dal", "Rice", "3 roti", "Salad"]},
+      {"day": "Friday", "items": ["Chole", "Rice", "3 roti", "Pickle"]},
+      {"day": "Saturday", "items": ["Paneer bhurji", "Dal", "Rice", "3 roti"]},
+      {"day": "Sunday", "items": ["Veg pulao", "Raita", "Mixed veg", "Kheer"]}
+    ]
+  },
+  {
+    "id": "k06",
+    "name": "Rajasthani Dera",
+    "cuisine": "Rajasthani",
+    "pricePerTiffin": 150,
+    "isVeg": true,
+    "rating": 4.3,
+    "distanceKm": 2.8,
+    "description": "Rajasthani classics from the desert kitchen, slow-cooked and ghee-finished.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Dal", "Baati", "Churma", "Garlic chutney"]},
+      {"day": "Tuesday", "items": ["Gatte ki sabzi", "Jeera rice", "3 roti", "Papad"]},
+      {"day": "Wednesday", "items": ["Ker sangri", "Bajra roti", "Panchmel dal", "Rice"]},
+      {"day": "Thursday", "items": ["Rajasthani kadhi", "Bajra khichdi", "Papad", "Pickle"]},
+      {"day": "Friday", "items": ["Mangodi sabzi", "Dal", "Rice", "3 roti"]},
+      {"day": "Saturday", "items": ["Papad ki sabzi", "Dal", "Rice", "3 roti"]},
+      {"day": "Sunday", "items": ["Moong dal kachori", "Aloo sabzi", "Boondi raita", "Malpua"]}
+    ]
+  },
+  {
+    "id": "k07",
+    "name": "Malabar Meals",
+    "cuisine": "Kerala",
+    "pricePerTiffin": 170,
+    "isVeg": false,
+    "rating": 4.5,
+    "distanceKm": 4.0,
+    "description": "Kerala-style meals with coconut, curry leaves and fresh-ground spices.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Red rice", "Sambar", "Cabbage thoran", "Pappadam"]},
+      {"day": "Tuesday", "items": ["Kerala fish curry", "Red rice", "Beetroot thoran", "Pappadam"]},
+      {"day": "Wednesday", "items": ["Avial", "Red rice", "Parippu curry", "Pappadam"]},
+      {"day": "Thursday", "items": ["Chicken roast", "2 parotta", "Salad", "Raita"]},
+      {"day": "Friday", "items": ["Egg roast", "Rice", "Cabbage thoran", "Sambar"]},
+      {"day": "Saturday", "items": ["Prawn curry", "Rice", "Thoran", "Pappadam"]},
+      {"day": "Sunday", "items": ["Malabar chicken biryani", "Raita", "Salad", "Payasam"]}
+    ]
+  },
+  {
+    "id": "k08",
+    "name": "Green Bowl Fit Tiffin",
+    "cuisine": "Healthy Bowls",
+    "pricePerTiffin": 180,
+    "isVeg": true,
+    "rating": 4.1,
+    "distanceKm": 1.5,
+    "description": "Balanced high-protein bowls and millets for people watching what they eat.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Quinoa pulao", "Moong sprout salad", "Cucumber raita"]},
+      {"day": "Tuesday", "items": ["Brown rice", "Rajma", "Stir-fried veggies", "Salad"]},
+      {"day": "Wednesday", "items": ["Paneer tikka bowl", "Multigrain roti", "Mint chutney"]},
+      {"day": "Thursday", "items": ["Lentil soup", "Whole wheat wrap", "Fruit"]},
+      {"day": "Friday", "items": ["Chickpea salad bowl", "Jowar roti", "Dal"]},
+      {"day": "Saturday", "items": ["Oats khichdi", "Sauteed greens", "Curd"]},
+      {"day": "Sunday", "items": ["Veg millet pulao", "Sambar", "Fruit salad", "Buttermilk"]}
+    ]
+  },
+  {
+    "id": "k09",
+    "name": "Maharashtrian Mauli",
+    "cuisine": "Maharashtrian",
+    "pricePerTiffin": 125,
+    "isVeg": true,
+    "rating": 4.4,
+    "distanceKm": 2.3,
+    "description": "Authentic Maharashtrian thalis with bhakri, usal and seasonal specials.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Varan bhaat", "Batata bhaji", "Chapati", "Koshimbir"]},
+      {"day": "Tuesday", "items": ["Pithla", "Jowar bhakri", "Thecha", "Rice"]},
+      {"day": "Wednesday", "items": ["Matki usal", "Chapati", "Rice", "Papad"]},
+      {"day": "Thursday", "items": ["Bharli vangi", "Bhakri", "Dal", "Rice"]},
+      {"day": "Friday", "items": ["Zunka", "Bhakri", "Dal", "Rice"]},
+      {"day": "Saturday", "items": ["Masale bhat", "Kadhi", "Papad", "Raita"]},
+      {"day": "Sunday", "items": ["Puran poli", "Katachi amti", "Rice", "Batata bhaji"]}
+    ]
+  },
+  {
+    "id": "k10",
+    "name": "Hyderabadi Dum Kitchen",
+    "cuisine": "Hyderabadi",
+    "pricePerTiffin": 190,
+    "isVeg": false,
+    "rating": 4.6,
+    "distanceKm": 3.9,
+    "description": "Slow-cooked dum biryanis and Hyderabadi curries with traditional sides.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Hyderabadi veg biryani", "Mirchi ka salan", "Raita"]},
+      {"day": "Tuesday", "items": ["Chicken dum biryani", "Mirchi ka salan", "Raita"]},
+      {"day": "Wednesday", "items": ["Dalcha", "Jeera rice", "Bagara baingan", "Salad"]},
+      {"day": "Thursday", "items": ["Mutton dum biryani", "Mirchi ka salan", "Raita"]},
+      {"day": "Friday", "items": ["Egg biryani", "Mirchi ka salan", "Raita"]},
+      {"day": "Saturday", "items": ["Khichdi", "Kheema", "Khatta", "Papad"]},
+      {"day": "Sunday", "items": ["Chicken curry", "Rumali roti", "Pulao", "Double ka meetha"]}
+    ]
+  },
+  {
+    "id": "k11",
+    "name": "Jain Satvik Tiffin",
+    "cuisine": "Jain",
+    "pricePerTiffin": 135,
+    "isVeg": true,
+    "rating": 4.0,
+    "distanceKm": 1.0,
+    "description": "No onion, garlic or root vegetables; pure satvik cooking.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Moong dal", "Rice", "3 roti", "Lauki sabzi"]},
+      {"day": "Tuesday", "items": ["Paneer tomato curry", "Jeera rice", "3 roti", "Salad"]},
+      {"day": "Wednesday", "items": ["Kadhi", "Khichdi", "Papad", "Salad"]},
+      {"day": "Thursday", "items": ["Tinda masala", "Dal", "Rice", "3 roti"]},
+      {"day": "Friday", "items": ["Parwal sabzi", "Chana dal", "Rice", "3 roti"]},
+      {"day": "Saturday", "items": ["Methi thepla", "Curd", "Pickle", "Sukhi moong"]},
+      {"day": "Sunday", "items": ["Paneer pulao", "Raita", "Dal", "Kheer"]}
+    ]
+  },
+  {
+    "id": "k12",
+    "name": "Bihari Litti Corner",
+    "cuisine": "Bihari",
+    "pricePerTiffin": 115,
+    "isVeg": true,
+    "rating": 3.9,
+    "distanceKm": 5.2,
+    "description": "Smoky litti, chokha and sattu dishes from Bihar's home kitchens.",
+    "weeklyMenu": [
+      {"day": "Monday", "items": ["Dal", "Rice", "Aloo bhujia", "Papad"]},
+      {"day": "Tuesday", "items": ["Litti", "Baingan chokha", "Aloo chokha", "Chutney"]},
+      {"day": "Wednesday", "items": ["Sattu paratha", "Aloo sabzi", "Curd", "Pickle"]},
+      {"day": "Thursday", "items": ["Kadhi bari", "Rice", "Roti", "Papad"]},
+      {"day": "Friday", "items": ["Ghugni", "Puri", "Salad", "Pickle"]},
+      {"day": "Saturday", "items": ["Dal pitha", "Aloo sabzi", "Tomato chutney"]},
+      {"day": "Sunday", "items": ["Khichdi", "Baingan chokha", "Papad", "Pickle"]}
+    ]
+  }
+]
