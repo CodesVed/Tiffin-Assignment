@@ -73,14 +73,14 @@ fun KitchenListScreen(
 }
 
 @Composable
-private fun LoadingContent() {
+internal fun LoadingContent() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         CircularProgressIndicator()
     }
 }
 
 @Composable
-private fun MessageContent(
+internal fun MessageContent(
     title: String,
     message: String,
     actionLabel: String,
@@ -151,7 +151,7 @@ private fun KitchenCard(kitchen: Kitchen, onClick: () -> Unit) {
 }
 
 @Composable
-private fun VegBadge(isVeg: Boolean) {
+internal fun VegBadge(isVeg: Boolean) {
     // Colour plus a text label, so the meaning never depends on colour alone.
     val dotColor = if (isVeg) Color(0xFF2E7D32) else Color(0xFFC62828)
     Row(verticalAlignment = Alignment.CenterVertically) {
