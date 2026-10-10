@@ -1,6 +1,7 @@
 package com.example.tiffin.ui
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -10,7 +11,7 @@ import com.example.tiffin.ui.list.KitchenListScreen
 import com.example.tiffin.ui.paywall.PaywallScreen
 
 @Composable
-fun TiffinNavHost(modifier: Modifier = Modifier) {
+fun TiffinNavHost(showPaywallOnStart: Boolean, modifier: Modifier = Modifier) {
     val navController = rememberNavController()
 
     NavHost(
@@ -32,5 +33,11 @@ fun TiffinNavHost(modifier: Modifier = Modifier) {
         composable<PaywallRoute> {
             PaywallScreen(onClose = { navController.popBackStack() })
         }
+    }
+
+    // One-shot. showPaywallOnStart is true only for a freshly created Activity (see MainActivity),
+    // so rotation and process-death restore never run this navigation a second time.
+    LaunchedEffect(Unit) {
+        if (showPaywallOnStart) navController.navigate(PaywallRoute)
     }
 }

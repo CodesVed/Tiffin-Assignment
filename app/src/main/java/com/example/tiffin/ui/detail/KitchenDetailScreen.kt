@@ -43,6 +43,8 @@ fun KitchenDetailScreen(
     viewModel: KitchenDetailViewModel = viewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val purchasedAtMillis by viewModel.purchasedAtMillis.collectAsStateWithLifecycle()
+    val isPaid = purchasedAtMillis > 0L
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -60,7 +62,7 @@ fun KitchenDetailScreen(
         },
         bottomBar = {
             if (uiState is KitchenDetailUiState.Success) {
-                SubscribeBar(onSubscribe = onSubscribe)
+                SubscribeBar(isPaid = isPaid, onSubscribe = onSubscribe)
             }
         },
     ) { innerPadding ->
@@ -90,16 +92,17 @@ fun KitchenDetailScreen(
 }
 
 @Composable
-private fun SubscribeBar(onSubscribe: () -> Unit) {
+private fun SubscribeBar(isPaid: Boolean, onSubscribe: () -> Unit) {
     Surface(modifier = Modifier.fillMaxWidth(), tonalElevation = 3.dp) {
         Button(
             onClick = onSubscribe,
+            enabled = !isPaid,
             modifier = Modifier
                 .fillMaxWidth()
                 .navigationBarsPadding()
                 .padding(16.dp),
         ) {
-            Text("Subscribe")
+            Text(if (isPaid) "Subscribed ✓" else "Subscribe")
         }
     }
 }

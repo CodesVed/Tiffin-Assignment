@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import com.example.tiffin.data.UserPrefs
 
 sealed interface KitchenDetailUiState {
     data object Loading : KitchenDetailUiState
@@ -32,6 +33,10 @@ class KitchenDetailViewModel(
     private val kitchenId: String = savedStateHandle.toRoute<KitchenDetailRoute>().kitchenId
 
     private val loader = KitchenAssetLoader(application)
+    private val userPrefs = UserPrefs.get(application)
+
+    /** 0 = not purchased. The screen turns this into "Subscribed". */
+    val purchasedAtMillis: StateFlow<Long> = userPrefs.purchasedAtMillis
 
     private val _uiState = MutableStateFlow<KitchenDetailUiState>(KitchenDetailUiState.Loading)
     val uiState: StateFlow<KitchenDetailUiState> = _uiState.asStateFlow()
