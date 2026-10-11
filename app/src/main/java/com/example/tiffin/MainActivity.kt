@@ -17,10 +17,15 @@ class MainActivity : ComponentActivity() {
         val userPrefs = UserPrefs.get(this)
 
         // A "launch" is a brand-new Activity instance (savedInstanceState == null).
-        // Rotation and process-death restore pass a non-null Bundle, so they are never counted
-        // and never re-trigger the paywall.
+        // Rotation and process-death restore pass a non-null Bundle, so they are never counted,
+        // never logged as a launch, and never re-trigger the paywall.
         val showPaywallOnStart = if (savedInstanceState == null) {
-            shouldShowPaywallOnLaunch(userPrefs.recordLaunch(), userPrefs.isPaid)
+            val launchCount = userPrefs.recordLaunch()
+            AppAnalytics.instance.logEvent(
+                AnalyticsEvents.APP_LAUNCHED,
+                mapOf("launch_number" to launchCount, "is_paid" to userPrefs.isPaid),
+            )
+            shouldShowPaywallOnLaunch(launchCount, userPrefs.isPaid)
         } else {
             false
         }

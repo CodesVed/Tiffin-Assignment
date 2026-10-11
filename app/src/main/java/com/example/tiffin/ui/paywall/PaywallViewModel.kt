@@ -4,10 +4,14 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.toRoute
+import com.example.tiffin.AnalyticsEvents
+import com.example.tiffin.AppAnalytics
 import com.example.tiffin.data.UserPrefs
 import com.example.tiffin.data.chargeTimeMillis
 import com.example.tiffin.data.formatDate
 import com.example.tiffin.data.formatDateTime
+import com.example.tiffin.ui.PaywallRoute
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -30,6 +34,10 @@ class PaywallViewModel(
 ) : AndroidViewModel(application) {
 
     private val userPrefs = UserPrefs.get(application)
+    private val analytics = AppAnalytics.instance
+
+    /** What opened this paywall: PaywallSource.LAUNCH or PaywallSource.SUBSCRIBE_TAP. */
+    private val source: String = savedStateHandle.toRoute<PaywallRoute>().source
 
     // The moment the offer was shown. Kept in SavedStateHandle so rotation and
     // process death don't change the date the user is looking at.
@@ -50,7 +58,17 @@ class PaywallViewModel(
                 ),
             )
 
+    init {
+        // Log the view once per paywall visit. Rotation keeps this ViewModel alive; the flag in
+        // SavedStateHandle survives process death, so a restored paywall is not counted twice.
+        if (!userPrefs.isPaid && savedStateHandle.get<Boolean>(KEY_VIEW_LOGGED) != true) {
+            analytics.logEvent(AnalyticsEvents.PAYWALL_VIEWED, mapOf("source" to source))
+            savedStateHandle[KEY_VIEW_LOGGED] = true
+        }
+    }
+
     fun onPayClicked() {
+        val wasPaid = userPrefs.isPaid
         val now = System.currentTimeMillis()
 
         // Is the date on screen still the date we would charge on right now?
@@ -63,8 +81,11 @@ class PaywallViewModel(
             return // the user reviews the new date and taps again
         }
 
-        notice.value =
-            if (userPrefs.markPurchased(now)) PaywallNotice.None else PaywallNotice.SaveFailed
+        val saved = userPrefs.markPurchased(now)
+        if (saved && !wasPaid) {
+            analytics.logEvent(AnalyticsEvents.SUBSCRIPTION_PURCHASED, mapOf("source" to source))
+        }
+        notice.value = if (saved) PaywallNotice.None else PaywallNotice.SaveFailed
     }
 
     private fun buildState(
@@ -86,5 +107,6 @@ class PaywallViewModel(
 
     private companion object {
         const val KEY_OFFER_ANCHOR = "offer_anchor_millis"
+        const val KEY_VIEW_LOGGED = "paywall_view_logged"
     }
 }
